@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- BOILERPLATE -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Be My Valentine?</title>
+        <link
+            rel="stylesheet"
+            href="./question.css"
+        />
+        <!-- 
+            Embedded font code (from Google Fonts)
+            Fonts:
+                La Belle Aurore
+                Caveat
+                Liter
+                Raleway
+                Comfortaa
+                Cormorant Infant
+                Monsterrat
+                Triodion
+                Noto Serif
+                Poppins
+                Libre Franklin
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=La+Belle+Aurore&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Triodion&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+            />
+    </head>
+
+    <body>
+      <section>
+
+        <audio id="please" src="pleasepleaseplease.mp3" preload="auto"></audio>
+
+        <div id="valentine-question"><b>Will you, Jeanelle Annika Cielo,<br />be my Valentine?</b></div>
+        <div class="buttons-container">
+          <button class="answerButton" onclick="location.href='yay.html'">Yessy!!!</button>
+          <button class="answerButton" id="noButton" onClick="togglePlay()">Nope</button> <!-- Will play please please please if Nope is clicked -->
+        </div>
+        <br />
+        <img src="catplease.gif" alt="cutie cat" class="responsive" />
+      </section>
+    </body>
+
+    <!-- JavaScript code -->
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          // Change the text of the noButton
+          this.textContent = "Pleaaaase 🥺🥺🥺";
+    
+          // Find the yesButton
+          var yesButton = document.querySelector('button[onclick*="yay.html"]');
+          
+          // Get the current font size of the yesButton
+          var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+          
+          // Increase the font size of the yesButton by 10px
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; 
+        });
+
+      // Code for Playing Audio => Audio will only play if Nope button is clicked
+      const myAudio = document.getElementById("please");
+      const isPlaying = false;
+
+      function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+      };
+
+      myAudio.onplaying = function() {
+        isPlaying = true;
+      };
+      myAudio.onpause = function() {
+        isPlaying = false;
+      };
+      </script>
+
+</html>

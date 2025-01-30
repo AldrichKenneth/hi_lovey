@@ -1,0 +1,79 @@
+:root {
+    --navy: #102C57;
+    --blue: #1679AB;
+    --peach: #FFB1B1;
+    --pink: #FFCBCB;
+    --pastel-pink: #FFD1DC;
+    --flamingo: #FC8EAC;
+    --dark-pink: #E75480;
+    --background: #fcf4e4;
+    --text-pink: #fc9696;
+    --light-pink: #fcbcbc;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+#hi-message {
+    margin-top: 15vh;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    color: var(--text-pink);
+    text-align: center;
+}
+
+#click-me {
+    margin-top: 2em;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--text-pink);
+    text-align: center;
+}
+
+.my-pic {
+    margin-top: 1.5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.my-pic img {
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid #ff9494;
+    object-fit: cover;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* SHRINK EFFECT */
+.shrink img {
+    transition: 1s ease;
+}
+    
+.shrink img:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+}

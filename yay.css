@@ -1,0 +1,163 @@
+:root {
+    --navy: #102C57;
+    --blue: #1679AB;
+    --peach: #FFB1B1;
+    --pink: #FFCBCB;
+    --pastel-pink: #FFD1DC;
+    --flamingo: #FC8EAC;
+    --dark-pink: #E75480;
+    --background: #fcf4e4;
+    --text-pink: #fc9696;
+    --light-pink: #fcbcbc;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+#happy-message {
+    margin-top: 10vh;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--text-pink);
+    text-align: center;
+    line-height: 2.0;
+}
+
+.increase-size {
+    font-size: 120px;
+}
+
+#click-heart {
+    margin-top: 3em;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 40px;
+    color: var(--text-pink);
+    text-align: center;
+}
+
+#love-message {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    font-family: "Caveat", sans-serif;
+    font-weight: 600;
+    font-size: 65px;
+    color: var(--text-pink);
+    text-align: center;
+}
+
+.us-pic {
+    margin-top: 3em;;
+    display: block;
+    max-width: 1000px;
+    max-height: 2000px;
+    width: auto;
+    height: auto;
+    border: 5px solid #ff9494;
+    object-fit: cover;
+    padding: 10px;
+    /* center image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flower-pic {
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    /* center image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PULSING HEART CSS CODE
+credit: https://codepen.io/puresick1/pen/popjyG */
+
+#wrapper {
+    position: relative;
+    margin-top: 30px;
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
+	animation:  pulse 1s infinite;
+}
+
+
+#pulsingheart { 
+    position: relative; 
+    width: 100px; 
+    height: 90px;
+    cursor: pointer;
+} 
+
+#pulsingheart:before, #pulsingheart:after { 
+    position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 50px; 
+    height: 80px; 
+    background: #aa0000; 
+    border-radius: 50px 50px 0 0; 
+    transform: rotate(-45deg);  
+    transform-origin: 0 100%;
+    animation:pulsecolor 1s infinite;
+} 
+
+#pulsingheart:after { 
+    left: 0; 
+    transform: rotate(45deg); 
+    transform-origin :100% 100%;
+    animation:pulsecolor 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.1)}
+}
+
+@keyframes pulsecolor {
+     10% {background: #dd0000}
+}
+/* END OF PULSING HEART*/
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .increase-size {
+        font-size: 60px;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+    .increase-size {
+        font-size: 70px;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .increase-size {
+        font-size: 100px;
+    }
+}

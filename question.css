@@ -1,0 +1,86 @@
+:root {
+    --navy: #102C57;
+    --blue: #1679AB;
+    --peach: #FFB1B1;
+    --pink: #FFCBCB;
+    --pastel-pink: #FFD1DC;
+    --flamingo: #FC8EAC;
+    --dark-pink: #E75480;
+    --background: #fcf4e4;
+    --text-pink: #fc9696;
+    --light-pink: #fcbcbc;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+}
+
+section {
+    width: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+}
+
+#valentine-question {
+    margin-top: 10vh;
+    font-family: "Noto Serif", sans-serif;
+    font-weight: 600;
+    font-size: 55px;
+    color: var(--text-pink);
+    text-align: center;
+}
+
+.buttons-container {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.answerButton {
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 15px;
+    margin-bottom: 20px;
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 35px;
+    background-color: #ffe3e1;
+    color: #e67373;
+    border-radius: 12px;
+    border: 2px solid #ffe3e1;
+    box-shadow: 1px 1px 2px #ff9494;
+    transition: 0.3s;
+  }
+  
+.answerButton:hover {
+    background-color: #ff9494;
+    color: #ffe3e1;
+    border: 2px solid #ff9494;
+    box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+img {
+    margin-top: 1em;;
+    max-width: 280px;
+    max-height: 280px;
+    /* center image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+   
+

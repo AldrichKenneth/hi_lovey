@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- BOILERPLATE -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Yay</title>
+        <link
+            rel="stylesheet"
+            href="./yay.css"
+        />
+        <!-- 
+            Embedded font code (from Google Fonts)
+            Fonts:
+                La Belle Aurore
+                Caveat
+                Liter
+                Raleway
+                Comfortaa
+                Cormorant Infant
+                Monsterrat
+                Triodion
+                Noto Serif
+                Poppins
+                Libre Franklin
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=La+Belle+Aurore&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Liter&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Triodion&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+            />
+    </head>
+
+    <body>
+        <section id="heart-section">
+            <div id="happy-message"><span class="increase-size">YAAAAAAAAAY</span></div>
+            <div id="click-heart">Click my heart!</div>
+            <div id="wrapper">
+                <a href="#message-section" onClick="togglePlay()"><div id="pulsingheart"></div></a>
+            </div>
+        </section>
+
+        <section id="message-section">
+
+            <audio id="valentine" src="valentinelaufey.mp3" preload="auto"></audio>
+
+            <img class="us-pic" src="meandlovey.gif" alt="Picture of me and lovey" class="responsive" />
+            <div id="love-message">Thank you for being my Valentine and my partner in everything!<br />I love you just as you are, always.</div>
+            <img class="flower-pic" src="spring-background-with-roses.png" alt="Picture of flowers" />
+        </section>
+    </body>
+
+    <script>
+    // Code for Playing Audio => Audio will only play if Nope button is clicked
+        const myAudio = document.getElementById("valentine");
+        const isPlaying = false;
+
+        function togglePlay() {
+        isPlaying ? myAudio.pause() : myAudio.play();
+        };
+
+        myAudio.onplaying = function() {
+        isPlaying = true;
+        };
+        myAudio.onpause = function() {
+        isPlaying = false;
+        };
+    </script>
+</html>
