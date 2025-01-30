@@ -90,7 +90,7 @@ section {
         font-size: 20px;
     }
 
-    .my-pic {
+    .my-pic img {
         max-height: 150px;
         max-width: 150px;
     }

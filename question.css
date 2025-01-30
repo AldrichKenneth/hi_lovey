@@ -85,11 +85,15 @@ img {
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     #valentine-question {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     .answerButton {
-        font-size: 20px;
+        font-size: 10px;
+    }
+
+    .buttons-container {
+        gap: 3px;
     }
 }
 
