@@ -82,5 +82,17 @@ img {
 }
 
 
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    #valentine-question {
+        font-size: 30px;
+    }
+
+    .answerButton {
+        font-size: 20px;
+    }
+}
+
+
    
 

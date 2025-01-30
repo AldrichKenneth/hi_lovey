@@ -77,3 +77,21 @@ section {
     transform: scale(0.8);
     transition: 1s ease;
 }
+/*END OF SHRINK EFFECT
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    #hi-message {
+        font-size: 40px;
+    }
+
+    #click-me {
+        font-size: 20px;
+    }
+
+    .my-pic {
+        max-height: 150px;
+        max-width: 150px;
+    }
+}

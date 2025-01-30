@@ -144,20 +144,28 @@ credit: https://codepen.io/puresick1/pen/popjyG */
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .increase-size {
-        font-size: 60px;
+        font-size: 40px;
+    }
+
+    #click-heart {
+        font-size: 30px;
+    }
+
+    #love-message {
+        font-size: 45px;
     }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
     .increase-size {
-        font-size: 70px;
+        font-size: 50px;
     }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px) {
     .increase-size {
-        font-size: 100px;
+        font-size: 70px;
     }
 }
